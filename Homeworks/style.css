@@ -1,0 +1,30 @@
+body{
+	 margin: 0; 
+	 padding: 0;
+
+}
+.box{ 
+	position: absolute;
+	top: 50; 
+	left: 50; 
+	transform: translate(50%, -115%);
+	width: calc(1500px/ 6);
+	height: 250px;
+	background: url(mouse.png);
+	animation: animate 1s steps(6) infinite;
+
+
+ }
+ @keyframes animate { 
+ 	from{
+ 		background-position: 0; 
+ 	}
+ 	to{ 
+ 		background-position: 1500px;
+ 	 }
+  }
+ canvas{ 
+ 	background-color: lightblue;
+  }
+
+ 

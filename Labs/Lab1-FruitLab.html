@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>CISC 3610 Lab 1 </title>
+</head>
+<body>
+    <canvas id="myCanvas" width="1000" height="1000"></canvas>
+<script>
+    function changeCanvasColor () {
+var fruit = [{name:"Apple", quantity: 20, color: "red"},
+        {name:"Orange", quantity: 10, color: "orange"},
+        {name:"Banana", quantity: 15, color: "yellow"},
+        {name:"Kiwi", quantity: 3, color: "green"},
+        {name:"blueberry", quantity: 5, color: "blue"},
+        {name:"grape", quantity: 8, color: "purple"}];
+
+        var canvas = document.getElementById("myCanvas");
+        var context = canvas.getContext("2d");
+        var ctxt = canvas.getContext("3d");
+        context.fillStyle = "white";
+        context.fillRect(0, 0, canvas.width, canvas.height);
+
+        context.font="30px Arial";
+        context.fillStyle = fruit[0].color;
+        var line=1;
+        var height=30;
+        context.fillText(fruit[0].name,10,height*line);
+        context.fillStyle = fruit[0].color;
+        context.fillRect(0, 50, fruit[0].quantity*10, 10);
+        line+=5;
+
+
+        context.fillStyle = fruit[1].color;
+        var line=5;
+        var height=30;
+        context.fillText(fruit[1].name,10,height*line);
+        context.fillStyle = fruit[1].color;
+        context.fillRect(0, 200, fruit[1].quantity*10, 10);
+        line+=5;
+
+        context.fillStyle = fruit[2].color;
+        var line=10;
+        var height=30;
+        context.fillText(fruit[2].name,10,height*line);
+        context.fillStyle = fruit[2].color;
+        context.fillRect(0, 350,fruit[2].quantity*10, 10);
+        line+=5;
+
+        context.fillStyle = fruit[3].color;
+        var line=15;
+        var height=30;
+        context.fillText(fruit[3].name,10,height*line);
+        context.fillStyle = fruit[3].color;
+        context.fillRect(0, 500,fruit[3].quantity*10, 10);
+        line+=5;
+
+        context.fillStyle = fruit[4].color;
+        var line=20;
+        var height=30;
+        context.fillText(fruit[4].name,10,height*line);
+        context.fillStyle = fruit[4].color;
+        context.fillRect(0, 650,fruit[4].quantity*10, 10);
+        line+=5;
+        context.fillStyle = fruit[5].color;
+        var line=25;
+        var height=30;
+        context.fillText(fruit[5].name,10,height*line);
+        context.fillStyle = fruit[5].color;
+        context.fillRect(0, 800,fruit[5].quantity*10, 10);
+        line+=5;
+
+            }
+
+        // Once the HTML document has finished loading and has been parsed, call the changeCanvasColor function.
+            document.addEventListener('DOMContentLoaded', changeCanvasColor);
+</script>
+</body>
+</html>

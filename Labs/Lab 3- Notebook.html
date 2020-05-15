@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Notebook: Take Notes</title>
+        <link href="style.css" rel="stylesheet" type="text/css">
+    </head>
+
+    <body>
+         <h1>Welcome to Kelvin's Notepad</h1>
+         <p>This notepad is used to take notes.</p>
+
+        <div class= "form">
+        <label for="title">Note Title: </label>  
+        <input type="text" id="nTitle" name ="nTitle" onchange="myFunction()"> <br><br>
+
+        <p>Write your notes here:  </p>
+        <label for="noteSpace"> </label>
+
+        <textarea id="noteSpace" rows="10" cols="80" onchange="myFunction()">Write here...</textarea>
+        <br>
+        <input type="button" value="Clear" onclick="javascript:eraseText();">
+        </div>
+
+        <p id="write"></p>
+        <script>
+            function myFunction() { 
+                var x = document.getElementById("noteSpace").value; 
+                var y = document.getElementById("title").value; 
+
+                document.getElementById("write").innerHTML = "Notes Taken: " + x;
+            }
+
+            function eraseText() { 
+                document.getElementById("noteSpace").value = "";
+            }
+        </script>
+
+        <style type="text/css">
+            .form { 
+                text-align: center;
+
+            }
+            
+        </style>
+    </body>
+</html>
+    

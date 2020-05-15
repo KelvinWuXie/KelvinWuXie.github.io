@@ -1,0 +1,130 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<style>
+		canvas { 
+			background-color: lightcoral; 
+		 }
+	</style>
+</head>
+<body>
+	
+
+<canvas id="myCanvas" width="1000" height="600" style="border:6px solid#000000"></canvas>
+
+<script >
+	var c = document.getElementById("myCanvas");
+	var ctx = c.getContext("2d");
+	ctx.beginPath();
+	ctx.arc(65, 50, 40, 0, 2 * Math.PI);
+	ctx.fillStyle = "yellow";	
+	ctx.fill();
+	ctx.stroke();
+
+	var d = document.getElementById("myCanvas");
+	var dtx = d.getContext("2d");
+	dtx.font = "30px Arial"; 
+	dtx.fillStyle= "black";
+	dtx.fillText("Kelvin Wu's Cartoon Art", 325, 40);
+
+	// all tri are mountains that brown
+	var tri = document.getElementById('myCanvas').getContext('2d');
+	tri.fillStyle ="Brown";
+	tri.beginPath();
+	tri.moveTo(150, 50);
+	tri.lineTo(50, 250);
+	tri.lineTo(250, 250);
+	tri.fill();
+
+	tri.beginPath();
+	tri.moveTo(300, 100);
+	tri.lineTo(200, 250);
+	tri.lineTo(400, 250);
+	tri.fill();
+
+	tri.beginPath();
+	tri.moveTo(450, 60);
+	tri.lineTo(150, 250);
+	tri.lineTo(550, 250);
+	tri.fill();
+
+	tri.beginPath();
+	tri.moveTo(550, 70);
+	tri.lineTo(250, 250);
+	tri.lineTo(650, 250);
+	tri.fill();
+
+	tri.beginPath();
+	tri.moveTo(700, 90);
+	tri.lineTo(400, 250);
+	tri.lineTo(800, 250);
+	tri.fill();
+
+	tri.moveTo(800, 70);
+	tri.lineTo(550, 250);
+	tri.lineTo(950, 250);
+	tri.fill();
+
+	// ctx2 is the river
+	var ctx2 = c.getContext("2d");
+	ctx2.fillStyle = "blue";
+	ctx2.beginPath();
+	ctx2.rect(10, 250, 950, 70);
+	ctx2.fill();
+	ctx2.stroke();
+
+	// ctx3 is the ground color
+	var ctx3 = c.getContext("2d");
+	ctx3.fillStyle = "green";
+	ctx3.beginPath();
+	ctx3.rect(10, 320, 950, 280);
+	ctx3.fill();
+	ctx3.stroke();
+
+	// ctx4 is the house 
+	var ctx4 = c.getContext("2d");
+	ctx4.fillStyle = "red";
+	ctx4.beginPath();
+	ctx4.rect(240, 350, 440, 180);
+	ctx4.fill();
+	ctx4.stroke();
+
+	// ctx5 and ctx6 is the windows
+	var ctx5 = c.getContext("2d");
+	ctx5.fillStyle = "lightyellow";
+	ctx5.beginPath();
+	ctx5.rect(260, 390, 60, 60);
+	ctx5.fill();
+	ctx5.stroke();
+
+	var ctx6 = c.getContext("2d");
+	ctx6.fillStyle = "lightyellow";
+	ctx6.beginPath();
+	ctx6.rect(590, 390, 60, 60);
+	ctx6.fill();
+	ctx6.stroke();
+
+	// ctx7 is the door
+	var ctx7 = c.getContext("2d");
+	ctx7.fillStyle = "black";
+	ctx7.beginPath();
+	ctx7.rect(420, 410, 60, 120);
+	ctx7.fill();
+	ctx7.stroke();
+
+
+	// front porch bushes
+	for(var i = 240; i <=700; i+= 160){
+	ctx.beginPath();
+	ctx.fillStyle = "lightgreen";
+	ctx.arc(i, 520, 25, 0, 2 * Math.PI);
+	ctx.fill();
+	ctx.stroke()
+	}
+
+
+
+</script>
+
+</body>
+</html>

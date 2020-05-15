@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+</head>
+<body>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+		<canvas id="doughnut-chart" width="800" height="450"></canvas>
+	<script>
+		new Chart(document.getElementById("doughnut-chart"), {
+    			type: 'doughnut',
+    			data: {
+      			labels: ["Brooklyn", "New York", "Queens", "Bronx", "Staten Island"],
+      			datasets: [
+        	{
+          		label: "For Hire Vehicles (Tens)",
+          		backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
+          		data: [5, 12, 3, 1, 0]
+        	}
+      		]
+    		},
+    			options: {
+      			title: {
+        		display: true,
+       		 text: 'First 21 For Hire Vehicles by Borough'
+      			}
+    			}
+				});
+	</script>
+	<br>
+	<br>
+	<br>
+	<canvas id="bar-chart-horizontal" width="800" height="450"></canvas>
+	<script>
+		new Chart(document.getElementById("bar-chart-horizontal"), {
+    	type: 'horizontalBar',
+    	data: {
+      		labels: ["Noise", "Hot Water", "Street Condition", "Illegal Parking", 
+      					" Blocked Driveway", "Streetlight", "Heating", "Plumbing", "Water System", " General Construction/ Plumbing"],
+      	datasets: [
+        {
+          label: "Number of Complaints (millions)",
+          backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850", "#DEB887", "#5F9EA0", "#D2691E", "black", "yellow"],
+          
+          data: [1858770,1289660,981988,958696, 948559,929672,887869,714412,657319,507445]
+        }
+      ]
+    },
+    	options: {
+      	legend: { display: false },
+      	title: {
+        display: true,
+        text: 'Top 10 Complaints filed with 311 in NYC'
+      }
+    }
+});
+	</script>
+</body>
+
+</html>
